@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Gilroy', sans-serif;
+}
+@font-face {
+    font-family: "Mediator Serif Narrow Web";
+    src: url("https://db.onlinewebfonts.com/t/07838ae7da40640f544e48700a42e4f5.eot");
+    src: url("https://db.onlinewebfonts.com/t/07838ae7da40640f544e48700a42e4f5.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/07838ae7da40640f544e48700a42e4f5.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/07838ae7da40640f544e48700a42e4f5.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/07838ae7da40640f544e48700a42e4f5.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/07838ae7da40640f544e48700a42e4f5.svg#Mediator Serif Narrow Web")format("svg");
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/Gilroy-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/Gilroy-RegularItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/Gilroy-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/Gilroy-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/Gilroy-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/Gilroy-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/Gilroy-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/Gilroy-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/Gilroy-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/Gilroy-ExtraBoldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/Gilroy-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/Gilroy-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/Gilroy-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/Gilroy-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/Gilroy-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/Gilroy-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/Gilroy-UltraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/Gilroy-UltraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+}
+
+
+
+
+#page1{
+    height: 100%;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+#page1 nav{
+    height: 6rem;
+    /* background-color: blue; */
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 2rem;
+}
+#page1 nav #nav_left{
+    width:30%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    /* background-color: crimson; */
+    gap: 1.5rem;
+}
+#page1 nav #nav_left h4{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #060318;
+}
+#page1 nav #nav_left h4:hover{
+    color: #868691;
+}
+#page1 nav #nav_center{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: purple; */
+}
+#page1 nav #nav_center img{
+    width: 10rem;
+    height: 6rem;
+    mix-blend-mode: multiply;
+    object-fit: contain;
+}
+#page1 nav #nav_right{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    /* background-color: green; */
+}
+#page1 nav #nav_right button{
+    font-family: 'Gilroy';
+    font-weight: 700;
+    padding: 16px 32px;
+    border-radius: 35px;
+    border: 2px solid #060318;
+    background-color: #060318;
+    color: #FFFFFF;
+    margin: 0rem 0.4rem;
+}
+#page1 nav #nav_right button:hover{
+    background-color: #FFFFFF;
+    color: #060318;
+}
+#page1 #heading{
+    height: 45vh;
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+}
+#page1 #heading h1{
+    font-family: "Mediator Serif Narrow Web";
+    font-weight: 700;
+    color: #060318;
+    font-size: 4.2vw;
+    text-align: center;
+    font-weight: 500;
+    line-height: 4.5vw;
+    margin-bottom: 5vh;
+}
+#page1 #heading h4{
+    font-weight: 500;
+    text-align: center;
+}
+#page1 #search_container{
+    height: 8vh;
+    background-color: palegoldenrod;
+    padding: 0rem 0rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+    border-radius: 35px;
+}
+#page1 #search_container form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#page1 #search_container input{
+    background-color: transparent;
+    width:calc(100% - 8vh);
+    padding: 0rem 2rem;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+#page1 #search_container button{
+    background-color:#EC5E95;
+    color:#FFFFFF;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    height: 6vh;
+    width: 6vh;
+    margin-right: 8px;
+    border: none;
+    outline: none;
+}
+
