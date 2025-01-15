@@ -144,7 +144,10 @@ html,body{
 }
 
 
-
+#gap{
+    height: 10vh;
+    width: 100%;
+}
 
 #page1{
     height: 100%;
@@ -230,6 +233,7 @@ html,body{
     margin-bottom: 5vh;
 }
 #page1 #heading h4{
+    font-size: 1.2vw;
     font-weight: 500;
     text-align: center;
 }
@@ -304,5 +308,80 @@ html,body{
 #page1 #categories_container h4:hover{
     color: #868691;
     background-color: #060318;
+}
+#page1 #scroller{
+    height: 42vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1.5rem;
+    margin-top: 3vh;
+    /* Removed animation from parent as it should be on the scrolling container */
+}
+#page1 #scroller #scroller_container{
+    /* background-color: blue; */
+    flex-shrink: 0;
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+    /* Added animation here since this is the container that needs to move */
+    animation: scroll_animation 08s linear infinite;
+}
+#page1 #scroller::-webkit-scrollbar{
+    display:none;
+}
+@keyframes scroll_animation{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(calc(-100% - 1.5rem));
+    }
+}
+#page1 #scroller  .elem{
+    flex-shrink: 0;
+    overflow:hidden;
+    height: 100%;
+    width: 15.5rem;
+    /* background-color: blue; */
+    border-radius: 30px;
+    position: relative;
+}
+#page1 #scroller  .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#page1 #scroller  .elem .media_info{
+    height: 35%;
+    width: 100%;
+    /* background-color: black; */
+    position: absolute;
+    padding: 1rem;
+    bottom:0;
+}
+#page1 #scroller  .elem .media_info h5{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    line-height: 1.2rem;
+}
+#page1 #scroller  .elem .media_info h6{
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #FFFFFF;
+    padding: 4px 10px;
+    border-radius: 30px;
+    margin-top: 1rem;
+    border: 2px solid #ffff;
 }
 
