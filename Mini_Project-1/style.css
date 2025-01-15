@@ -1,0 +1,909 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Gilroy-Regular";
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: monument extended;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Monument Extended"),
+    url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Regular.woff)
+      format("woff");
+}
+@font-face {
+  font-family: monument extended;
+  font-style: normal;
+  font-weight: 800;
+  src: local("Monument Extended"),
+    url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff)
+      format("woff");
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+  padding-top: 0.1px;
+}
+nav {
+  height: 5rem;
+  margin-top: 2rem;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav h3{
+  display:none;
+}
+nav h1 {
+  height: 100%;
+  font-family: "Monument Extended";
+  font-size: 2.8rem;
+  letter-spacing: -0.1rem;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  padding-left: 5rem;
+  width: 20%;
+  position: relative;
+}
+nav h1::after{
+  content: "©";
+  font-family: "Gilroy-Light";
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  left: 112%;
+  top: 22%; 
+}
+nav  h1::before{
+  content:"model management";
+  font-family: "Gilroy-Light";
+  font-size: 12px;
+  font-weight: 600;
+  position: absolute;
+  right:0;
+  letter-spacing: 0.01rem;
+  bottom: 10%; 
+}
+#nav-2 {
+  /* background-color: blue; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav h2 {
+  /* background-color: red; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  padding: 0 4rem;
+  border-right: 2px solid black;
+}
+nav h2:nth-last-child(1) {
+  border-right: none;
+}
+#center {
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 4rem;
+  /* padding-top: rem; */
+  position: relative;
+}
+#content {
+  /* background-color: blue; */
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  width: 100%;
+  position: relative;
+  /* margin-bottom: 10rem; */
+}
+#content video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+#overlay {
+  height: fit-content;
+  padding-bottom: 6vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.173);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  bottom: 0;
+  padding: 0 3rem;
+  color: #fff;
+}
+#over1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  padding-top: 1.5rem;
+}
+#over2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid #fff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  letter-spacing: -0.1rem;
+}
+#over1 h1 {
+  font-family: "Monument Extended";
+  font-size: 5rem;
+}
+#over1 h2 {
+  /* background-color: red; */
+  font-family: "Gilroy-Light";
+  font-size: 1rem;
+  font-size: 1.5rem;
+  padding: 1.3rem 1.5rem;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+#over2 h2 {
+  font-family: "Gilroy-Light";
+  letter-spacing: 0.01rem;
+  font-weight: 100;
+  font-size: 1 rem;
+  height: 6vh;
+}
+#over2 img {
+  height: 3rem;
+}
+#scroll {
+  height: 30vh;
+  /* background-color: red; */
+  /* white-space: nowrap; */
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: start;
+  gap: 3rem;
+}
+#scroll .container {
+  /* display: inline-block; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 3rem;
+  flex-shrink: 0;
+  padding: 0 0rem;
+  height: 100%;
+  width: fit-content;
+  /* background-color: blue; */
+  animation: scroll 15s linear infinite;
+}
+#scroll .container img {
+  height: 28vh;
+  width: 28vh;
+  object-fit: cover;
+  border-radius: 50%;
+  /* margin: 0 3rem; */
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 3rem));
+  }
+}
+#alphabets {
+  margin-top: 5vh;
+  height: 15vh;
+  width: 100%;
+  /* background-color: red; */
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  /* gap: rem; */
+  font-family: "Gilroy-Light";
+}
+#alphabets h3 {
+  text-transform: uppercase;
+  margin-right: 6rem;
+  border-bottom: 2px solid black;
+}
+#alphabets h4 {
+  font-weight: 100;
+  padding: 0.5rem 0.8rem;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0);
+  /* background-color: yellow; */
+  transition: border 0.5s ease;
+}
+#alphabets h4:hover {
+  border: 5px solid black;
+}
+#article1 {
+  height: 110vh;
+  width: 100%;
+  /* background-color: blue; */
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 6rem 4rem;
+  padding-bottom: 0rem;
+  flex-wrap: nowrap;
+  gap: 6rem;
+}
+#section_part1 {
+  flex-shrink: 0;
+  height: 100%;
+  width: 45%;
+  /* background-color: red; */
+}
+#section_part2 {
+  flex-shrink: 0;
+  height: calc(100% - 8rem);
+  width: 45%;
+  /* background-color: cyan; */
+}
+#section_part1 img {
+  height: calc(100% - 8rem);
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+#section_part1 h1 {
+  font-family: "Monument Extended";
+  padding-top: 1rem;
+  font-size: 4rem;
+}
+#section_part2 img {
+  height: 75%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+#section_part2 #section_part2_content {
+  width: 100%;
+  display: flex;
+  height: 28%;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+#section_part2 #section_part2_content h4 {
+  font-size: 1.4rem;
+  font-family: "Gilroy-Regular";
+}
+#section_part2 #section_part2_content h5 {
+  font-family: "Gilroy-Light";
+  font-size: 1rem;
+  font-weight: 100;
+}
+#article2 {
+  height: 80vh;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 5.063rem;
+  margin-bottom: 4rem;
+}
+#circular_text {
+  height: 20vh;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* background-color: cyan; */
+  /* overflow: hidden; */
+}
+#circular_text::after {
+  content: "";
+  height: 20vh;
+  width: 20vh;
+  position: absolute;
+  background-color: rgb(254, 254, 254);
+  mix-blend-mode: difference;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  overflow: hidden;
+  animation: reset_scale_circular_text 0.5s ease forwards;
+}
+#circular_text:hover::after {
+  animation: scale_circular_text 0.5s ease forwards;
+}
+@keyframes scale_circular_text {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes reset_scale_circular_text {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+#circular_text img {
+  height: 30vh;
+  width: 30vh;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+#article2 h2 {
+  font-family: "Gilroy-Bold";
+  font-size: 1.5rem;
+  font-weight: 100;
+  position: absolute;
+  bottom: 0;
+  left: 5.063;
+}
+#article2 #right {
+  width: 50%;
+  height: 100%;
+  background-image: url(https://images.ctfassets.net/2stk9dntpgwb/7i19vPuAqIiLdeWhg8e1O9/5ac01eaa351637260153ca3b0553f5d2/1IMG_4681.jpeg?fm=jpg&fl=progressive);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+#article3 {
+  height: 70vh;
+  width: 100%;
+  padding: 0rem 5.063rem;
+  /* background-color: pink; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 0rem;
+}
+#article3 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  image-rendering: pixelated;
+  object-position: top;
+}
+#updates {
+  height: 80vh;
+  width: 100%;
+  /* background-color: greenyellow; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0rem 5.063rem;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+#updates h1 {
+  font-family: "Monument Extended";
+  font-size: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+#updates .elem {
+  height: 21vh;
+  width: 100%;
+  /* background-color: red; */
+  border-top: 2px solid black;
+  padding:0.5rem  1rem;
+  display: flex;
+  overflow: hidden;
+}
+#updates .elem:nth-last-child(1) {
+  border-bottom: 2px solid black;
+
+}
+#updates .elem h5 {
+  width: 25vw;
+  text-transform: uppercase;
+  font-family: "Gilroy-Light";
+  font-size: 1.2rem;
+  /* background-color: greenyellow; */
+}
+#updates .elem #avatar {
+  height: 14vh;
+  width: 14vh;
+  border-radius: 50%;
+  overflow: hidden;
+  /* background-color: chartreuse; */
+}
+#updates .elem #avatar img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 80% 0%;
+  border-radius: 50%;
+  transform: scale(1.5);
+}
+#updates .elem #description {
+  height: 100%;
+  width: calc(100% - 25vw - 14vh);
+  /* background-color: pink; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15vw;
+}
+#updates .elem #description h2 {
+  font-family: "Gilroy-Regular";
+  font-size: 2rem;
+  font-weight: 100;
+  margin:5px 0;
+  font-weight: 100;
+}
+#article4{
+  height: 90vh;
+  width: 100%;
+  padding: 3rem 5.063rem;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+}
+#article4 #left{
+  width: 40%;
+  height: 100%;
+  /* background-color: blue; */
+  background-image: url(https://scontent.fpat11-2.fna.fbcdn.net/v/t1.6435-9/71109929_1293100507525585_5560936153768525824_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=dEh-JTT9N7QQ7kNvgGVt2QV&_nc_zt=23&_nc_ht=scontent.fpat11-2.fna&_nc_gid=ATJAFSLjr8RgKPmOWNAo9bW&oh=00_AYCzl2HjiVLxYn9_1BUJHGyXtLdmHNEE9tVVrHKiLcYhcw&oe=67ADE26Fhttps://scontent.fpat11-2.fna.fbcdn.net/v/t1.6435-9/71109929_1293100507525585_5560936153768525824_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=dEh-JTT9N7QQ7kNvgGVt2QV&_nc_zt=23&_nc_ht=scontent.fpat11-2.fna&_nc_gid=ATJAFSLjr8RgKPmOWNAo9bW&oh=00_AYCzl2HjiVLxYn9_1BUJHGyXtLdmHNEE9tVVrHKiLcYhcw&oe=67ADE26F);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#article4 #right{
+  width: 45%;
+  height: 100%;
+  /* background-color: green; */
+  position: relative;
+}
+#article4 #right h1{
+  font-family: "Monument Extended";
+  font-size: 3rem;
+  margin-bottom: 2rem;
+
+}
+#article4 #right h3{
+  margin-bottom: 2rem;
+}
+#article4 #right h6{
+  font-size: 0.8rem;
+}
+#article4 #right #images{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 2rem; */
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+}
+#article4 #right #images #image1{
+  height:40vh;
+  width: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+#article4 #right #images #image2{
+  height:40vh;
+  width: 40%;
+  object-fit: cover;
+  object-position: center;
+}
+#article5{
+  height: 70vh;
+  width: 100%;
+  padding: 1rem 5.063rem;
+  /* background-color: peachpuff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#article5 img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+#article5 h5{
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  /* background-color: pink; */
+  position: absolute;
+  right: 6.3rem;
+  top: 1.5rem;
+}
+#text_scroll{
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  padding: 0.5rem 0;
+  white-space: nowrap;
+  overflow-x:hidden;
+  overflow-y: hidden;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+
+}
+#text_scroll h1{
+  display: inline-block;
+  flex-shrink:0;
+  font-family: "Monument Extended";
+  font-size: 3rem;
+  margin-right: 16px;
+  text-transform: uppercase;
+  /* background-color: rgb(255, 247, 0); */
+  -webkit-text-stroke:1.5px  black;
+  letter-spacing:2px;
+  color: transparent;
+  animation: scroll_text 10s linear infinite;
+}
+@keyframes scroll_text{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+#blog{
+  height: 60vh;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  /* background-color: goldenrod; */
+}
+#blog h1{
+  font-family: "Monument Extended";
+  font-size: 3rem;
+  width:18%;
+  padding-left: 5.063rem;
+  padding-top: 3rem;
+  height: 100%;
+  /* background-color:burlywood; */
+}
+#blog .elem{
+  width: 40%;
+  height: 100%;
+  /* background-color:crimson; */
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#blog .elem h4{
+  font-family: "Gilroy-Regular";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+#blog .elem h4 span{
+  font-family: "Gilroy-Light";
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 0.3rem;
+  padding: 0.5rem 0.8rem;
+  /* padding-left:0; */
+  border-radius: 50%;
+  border: 1px solid black;
+}
+#blog .elem img{
+  height: 55%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+footer{
+  height:40vh;
+  width: 100%;
+  /* background-color: chocolate; */
+  display: grid;
+  display :flex;
+  border-top:2px solid black;
+  border-bottom:2px solid black;
+}
+#footer_left{
+  height: 100%;
+  width: 25%;
+  grid-row:1/2;
+  /* background-color: red; */
+  position: relative;
+
+}
+#footer_left h1 {
+  padding-left: 5.063rem;
+  padding-top: 1.5rem;
+  font-family: "Monument Extended";
+  font-size: 2.8rem;
+  letter-spacing: -0.1rem;
+  /* background-color: rgb(17, 0, 255); */
+  position:relative;
+ 
+}
+#footer_left h1::after{
+  content: "©";
+  font-family: "Gilroy-Light";
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  right: 7%;
+  top: 30%; 
+}
+#footer_left  h1::before{
+  content:"model management";
+  font-family: "Gilroy-Light";
+  font-size: 12px;
+  font-weight: 600;
+  position: absolute;
+  right:20%;
+  letter-spacing: 0.01rem;
+  bottom:-2%; 
+}
+.footer_middle{
+  padding-top:2rem;
+  /* background-color: bisque; */
+  width: 18%;
+  display:flex;
+  justify-content: center;
+  border-right: 2px solid black;
+}
+.footer_middle h2{
+  text-transform: uppercase;
+}
+#footer_right{
+  width: 40%;
+  height: 100%;
+  /* background-color: blue; */
+}
+#right1{
+  width: 100%;
+  height: 30%;
+  /* background-color: green; */
+  padding:1.5rem 2rem;
+  border-bottom: 2px solid black;
+}
+#right2{
+  height: 70%;
+  width: 100%;
+  padding:1.5rem 2rem;
+  /* background-color: yellow; */
+}
+#icons{
+  height: 40%;
+  width: 100%;
+  /* background-color: blue; */
+  display: flex;
+  gap:2rem;
+}
+#icons i{
+  font-size: 1.5rem;
+}
+#right2 h3{
+  font-size: 1rem;
+  margin-top: 1rem;
+  font-family: "Gilroy-Light";
+
+}
+#space{
+  height: 50px;
+  width: 100%;
+  background-color: transparent;
+}
+@media (max-width: 768px) {
+  nav {
+    height: 3.5rem;
+    margin-top: 2rem;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav h1 {
+    height: 100%;
+    font-family: "Monument Extended";
+    font-size: 1.5rem;
+    letter-spacing: -0.1rem;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding-left: 1.5rem;
+    width: 20%;
+    position: relative;
+  }
+  nav h1::after{
+    display: none;
+  }
+  nav  h1::before{
+    display: none;
+  }
+  #nav-2 {
+    /* background-color: blue; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  nav h2 {
+    display: none;    
+  }
+  nav h3{
+    display: initial;
+    font-size: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 2rem;
+    font-weight: 100;
+  }
+  #center {
+    height: 30vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vh;
+    padding: 0vw 3vw;
+    /* padding-top: rem; */
+    position: relative;
+  }
+  #content {
+    /* background-color: blue; */
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    width: 100%;
+    position: relative;
+    /* margin-bottom: 10rem; */
+  }
+  #content video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  #overlay {
+    height: 40%;
+    padding-bottom: 0vh;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.173); */
+    /* backdrop-filter: blur(10px); */
+    position: absolute;
+    bottom: 0;
+    padding:0 3vw;
+
+    color: #fff;
+  }
+  #over1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: palevioletred; */
+    margin:0 0;
+    height: 8vh;
+  }
+  #over2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #fff;
+    /* background-color: palevioletred; */
+    padding:0 0vw;
+    width: 100%;
+    letter-spacing: -0.1rem;
+  }
+  #over1 h1 {
+    font-family: "Monument Extended";
+    font-size: 1rem;
+    padding:0 0;
+  }
+  #over1 h2 {
+    /* background-color: red; */
+    font-family: "Gilroy-Light";
+    font-size: 0.8rem;
+    font-size: 0.5rem;
+    padding: 0.2rem 0.3rem;
+    border-radius: 50%;
+    border: 1px solid #fff;
+  }
+  #over2 h2 {
+    font-family: "Gilroy-Light";
+    letter-spacing: 0.01rem;
+    font-weight: 100;
+    font-size: 0.5rem;
+    /* background-color: pink; */
+    height: 2vh;
+  }
+  #over2 img {
+    height: 1rem;
+  }
+  #article3 #overlay{
+    display: none;
+  }#scroll {
+    height: 20vh;
+    /* background-color: red; */
+    /* white-space: nowrap; */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: start;
+    gap: 3vw;
+  }
+  #scroll .container {
+    /* display: inline-block; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3vw;
+    flex-shrink: 0;
+    padding: 0 0rem;
+    height: 100%;
+    width: fit-content;
+    /* background-color: blue; */
+    animation: scroll 6s linear infinite;
+  }
+  #scroll .container img {
+    height: 28vw;
+    width: 28vw;
+    object-fit: cover;
+    border-radius: 50%;
+    /* margin: 0 3rem; */
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% - 3vw));
+    }
+  }
+}
