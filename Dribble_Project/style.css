@@ -455,3 +455,123 @@ html,body{
 #page2 .box .bottom h5 i{
     margin: 0px 5px;
 }
+#page2 #last_button{
+    /* background-color: #060318; */
+    margin-top:170px;
+    padding-top:50px;
+    text-align: center;
+
+    font-weight: 500;
+    margin-top: 20px;
+}
+#page2 #last_button span{
+    padding: 20px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 30px;
+    border:2px solid #060318;
+    transition: all 0.2s ease-in;
+}
+#page2 #last_button span:hover{
+    background-color: #060318;
+    color: #FFFFFF;
+    font-weight: 300;
+}
+#page3{
+    height: 70vh;
+    width:100%;
+    background-color:#FFDA79;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top:5vh;
+}
+#page3 h1{
+    color:#060318;
+    font-family: "Mediator Serif Narrow Web";
+    font-size: 4.2vw;
+    font-weight: 550;
+    line-height: 4.5vw;
+    margin-bottom: 3vw;
+}
+#page3 h4{
+    font-weight: 400;
+    text-align:center;
+    font-size: 1.2vw;
+    margin-bottom: 3vw;
+}
+#page3 form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    margin-bottom: 3vw;
+}
+#page3 form button{
+    padding: 20px 25px;
+    background-image:none;
+    background-color: #060318;
+    border-radius: 30px;
+    border:none;
+    color:#f3f3f6;
+    font-size: 15px;
+    font-weight: 600;
+}
+#page3 form button:hover{
+    background-color: #f3f3f6;
+    color:#060318;
+}
+#page3 h4 span{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    color: #060318;
+    font-weight: 500;
+}
+footer{
+    width:100%;
+    height: 30vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer #footer_top{
+    width:100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1vw;
+    gap:3vw;
+}
+footer #footer_top img{
+    height: 80px;
+    mix-blend-mode: multiply;
+    object-fit:contain;
+}
+footer #footer_top h4{
+    color:#060318dc;
+
+}
+footer #footer_top h4:last-child{
+    font-size:1rem;
+    color: #060318;
+    gap:12px;
+
+}
+footer #footer_bottom{
+    display:flex;
+    justify-content: space-between;
+    padding: 0 3vw;
+    margin-bottom:3vh;
+}
+footer #footer_bottom h4{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #060318;
+}
+footer #footer_bottom h4:last-child{
+
+    word-spacing: 40px;
+}
