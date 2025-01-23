@@ -28,8 +28,28 @@ function loadingScreenAnimation() {
   timeline1.to("#loader", {
     opacity: 0,
     duration: 0.5,
-    delay: 3,
+    delay:2,
+    onComplete: () => {
+      document.querySelector("#loader").style.display = "none";
+    },
+  });
+  timeline1.from("#page1 nav, #page1 .page1Header h1",{
+    opacity: 0,
+    y:100,
+    delay: 0.3,
+    stagger:0.2,
+  });
+}
+function mouseFollower(){
+  document.addEventListener("mousemove", function (e) {
+    gsap.to("#crsr",{
+      left: e.x,
+      top: e.y,
+      ease:"power1.out"
+    });
   });
 }
 
+Shery.makeMagnet("#navRight h3, #navLeft .menu-opener__square"  );
 loadingScreenAnimation();
+mouseFollower();

@@ -9,9 +9,16 @@
       href="https://www.google.com/s2/favicons?sz=256&domain_url=https%3A%2F%2Fobys.agency%2F"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="crsr"></div>
     <div id="loader">
       <div class="line">
         <div id="line1-part1">
@@ -38,8 +45,8 @@
           <div id="navLeft">
             <svg
               class="menu-opener__square"
-              width="12"
-              height="12"
+              width="15"
+              height="15"
               viewBox="0 0 12 12"
               fill="none"
             >
@@ -126,9 +133,26 @@
             <h3>Contacts</h3>
           </div>
         </nav>
-        <div id="page1Header"></div>
+        <div class="page1Header">
+          <h1>We Design</h1>
+        </div>
+        <div class="page1Header">
+          <h1>Unique</h1>
+        </div>
+        <div class="page1Header">
+          <h1><span>Web</span>/<span>Graphics</span></h1>
+        </div>
+        <div class="page1Header">
+          <h1>experience</h1>
+        </div>
       </div>
-      <div class="pages" id="page2"></div>
+      <div class="pages" id="page2">
+        <div class="videoWrapper">
+            <div id="playIcon"><i class="ri-play-large-fill"></i></div>
+            <img src="https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg" alt="">
+            <video autoplay loop muted src="Assets/Obys-Showreel-2024.mp4" ></video>
+        </div>
+      </div>
       <div class="pages" id="page3"></div>
     </div>
     <script
@@ -143,6 +167,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/sheryjs/dist/Shery.js"
+    ></script>
+
     <script src="script.js"></script>
   </body>
 </html>
