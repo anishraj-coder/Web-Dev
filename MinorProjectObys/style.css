@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+@font-face {
+  font-family: "silkseri-light";
+  src: url("Assets/silkserif-lightitalic-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "silkseri-regular";
+  src: url("Assets/silkserif-regularitalic-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "plain-light";
+  src: url("Assets/plain-light-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "plain-regular";
+  src: url("Assets/plain-regular-webfont.woff") format("woff");
+}
+/* #0B0B0B */
+/* #151515 */
+#loader {
+  height: 100%;
+  width: 100%;
+  background-color: #0b0b0b;
+  position: fixed;
+  z-index: 1000;
+  font-family: "plain-light";
+  padding: 22vh 10vw;
+}
+.line {
+  /* background-color: red; */
+  line-height: fit-content;
+  margin-bottom: 3px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 3vw;
+}
+#line1-part1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+}
+#line1-part1 h5,
+#line1-part1 h6 {
+  font-family: "silkseri-light";
+  font-size: 2.6vw;
+  font-weight: 100;
+}
+#line1-part1 h5 {
+  /* background-color: crimson; */
+  width: 5vw;
+  text-align: right;
+}
+.line h1 {
+  font-size: 6.5vw;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+#main {
+  background-color: #111;
+  position: relative;
+}
+#page1 {
+  width: 100%;
+  height: 100vh;
+  background-color: #0b0b0b;
+}
+.line h2 {
+  font-size: 5vw;
+  text-transform: uppercase;
+    font-family:"silkseri-regular" ;
+    font-weight: 500;
+    color:transparent;
+    opacity: 0;
+    -webkit-text-stroke: 1px #fff;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes nowAnime {
+  0% {
+    font-family: "silkseri-regular";
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+    opacity: 1;
+  }
+  45% {
+    font-family: "silkseri-regular";
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+    opacity: 0;
+  }
+  50% {
+    font-family: "plain-regular";
+    -webkit-text-stroke: 1px #fff;
+    color:#fff;
+    font-weight: 500;
+    opacity: 1;
+  }
+  100% {
+    font-family: "plain-regular";
+    font-weight: 500;
+    color: #fff;
+    -webkit-text-stroke: 1px #fff;
+  }
+}
