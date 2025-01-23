@@ -46,6 +46,14 @@ body {
   justify-content: start;
   gap: 3vw;
 }
+#footElement {
+  padding: 1vw 0vw;
+}
+#footElement h2 {
+  font-size: 0.8vw;
+  font-family: "plain-light";
+  font-weight: 300;
+}
 #line1-part1 {
   display: flex;
   align-items: center;
@@ -80,11 +88,11 @@ body {
 .line h2 {
   font-size: 5vw;
   text-transform: uppercase;
-    font-family:"silkseri-regular" ;
-    font-weight: 500;
-    color:transparent;
-    opacity: 0;
-    -webkit-text-stroke: 1px #fff;
+  font-family: "silkseri-regular";
+  font-weight: 500;
+  color: transparent;
+  opacity: 0;
+  -webkit-text-stroke: 1px #fff;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
@@ -106,7 +114,7 @@ body {
   50% {
     font-family: "plain-regular";
     -webkit-text-stroke: 1px #fff;
-    color:#fff;
+    color: #fff;
     font-weight: 500;
     opacity: 1;
   }
@@ -116,4 +124,48 @@ body {
     color: #fff;
     -webkit-text-stroke: 1px #fff;
   }
+}
+nav {
+  width: 100%;
+  height: 15%;
+  padding: 9vh 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* position: sticky; */
+  background-color: transparent;
+  top: 0;
+}
+#navLeft {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+  gap: 6vw;
+}
+#navMiddle {
+  width: 30vw;
+  height: 17vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* background-color: red; */
+}
+#navMiddle h1 {
+  font-size: 0.9vw;
+  font-family: "plain-light";
+  font-weight: 300;
+}
+#navRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+}
+#navRight h3 {
+  font-family: "plain-light";
+  font-weight: 300;
+  font-size: 1vw;
 }
