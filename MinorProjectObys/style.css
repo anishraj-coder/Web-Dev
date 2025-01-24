@@ -35,6 +35,7 @@ body {
   border: 2px solid #fff;
   position: fixed;
   z-index: 100;
+  pointer-events: none; 
   position: fixed;
   transform: translate(-50%, -50%);
   mix-blend-mode: difference;
@@ -229,10 +230,11 @@ nav {
   animation-iteration-count: 1; */
 
 }
-
 #page1 .page1Header h1 span {
   text-decoration: underline;
   text-underline-offset: 10px;
+  text-decoration-thickness: 2px;
+
 }
 #page1 .page1Header h1 span:hover {
   -webkit-text-stroke: 2px #fff;
@@ -243,12 +245,14 @@ nav {
 /*!Page2 */
 
 #page2 {
-  height: 100vh;
+  height: 85vh;
   width: 100%;
   background-color: #0b0b0b;
   padding: 10vh;
   /* background-color: red; */
   position: relative;
+  margin-top:20vw;
+  margin-bottom:15vw;
 }
 #page2 .videoWrapper {
   background-color: pink;
@@ -291,12 +295,137 @@ nav {
 #playIcon i {
   font-size: 2vw;
 }
+/* !Page 3 */
 #page3 {
   min-height: 100vh;
   width: 100%;
-  background-color: #414141;
+  background-color: #0b0b0b;
+  position: relative;
+  padding-top:5vw;
+  padding-bottom: 3vw;
+  margin-bottom:20vw;
+}
+#page3 #underline{
+  margin-left:27vw;
+  margin-top:4vw;
+}
+#page3 h1 {
+  font-family: "plain-regular";
+  font-size: 7vw;
+  position:relative;
+  margin-left:27vw;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+#page3 h1::before{
+  content:"02";
+  font-family: "silkseri-regular";
+  font-weight: 300;
+  font-size:3vw;
+  left:-12%;  
+  position:absolute;
+  top:15%;
+}
+#image-div-container{
+  position:relative;
+  padding:2vw;
+  /* background-color: red; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap:3vw;
+}
+
+#image-div-container .image-div{
+  /* background-color: blue; */
+  width:27vw;
+  height:38vw;
+  overflow:hidden;
+  flex-shrink: 0;}
+#image-div-container .image-div img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  object-position: center;
+}
+#image-div-container .image-div:nth-child(1){
+  width:24vw;
+  height:33vw;
+}
+.imageCircle{
+  width:25vw;
+  height:25vw;
+  border-radius: 50%;
+  border:2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
+.imageCircle svg{
+  height: 32%;
+}
+.imageCircle:nth-child(3){
+  margin-top:9vw;
+  margin-left:10vw;
+}
+.imageCircle:nth-child(4) svg{
+  rotate:-45deg;
+  
+}
+.circle-in {
+  width:100%;
+  height:100%;
+  border-radius: 50%;
+  background-color: #fff;
+  color:#0b0b0b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  top:0;
+  left: 0;
+  scale:0;
+  opacity: 0; 
+  /* transition:all ease-in-out 0.3s; */
+}
+/* .imageCircle:nth-child(3):hover .circle-in:nth-child(2){
+  scale: 1;
+  opacity: 1;
+}
+.imageCircle:nth-child(3):hover .circle-in:nth-child(2) p{
+  scale: 1;
+  opacity: 1;
+}
+.imageCircle:nth-child(4):hover .circle-in:nth-child(2){
+  scale: 1;
+  opacity: 1;
+}
+.imageCircle:nth-child(4):hover .circle-in:nth-child(2) p{
+  scale: 1;
+  opacity: 1;
+} */
+.circle-in p{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "plain-light";
+  font-size:0.8vw;
+  font-weight: 500;
+  font-size:0.9vw;
+  width:70%;
+  margin-left:15%;
+  position:absolute;
+  top:0;
+  scale: 0;
+  opacity: 0;
+  left:0;
+  transition: all ease-in-out 0.3s;
+  transition-delay: 0.4s;
+}
+/* !Page 4 */
 #page4 {
   min-height: 100vh;
   width: 100%;
@@ -437,11 +566,13 @@ nav {
   
 }
 footer{
+  margin-top:10vw;
   min-height:70vh;
   width:100%;
   padding-left:27vw;
   font-family: "plain-regular";
   position: relative;
+  margin-bottom: 15vw;
 }
 footer h1{
   font-size:9vw;
@@ -458,7 +589,7 @@ footer h1::before{
   position:absolute;
   top:15%;
 }
-footer #underline{
+#underline{
   height:1px;
   width:100%;
   background-color: #fff;
@@ -490,3 +621,22 @@ footer #footerEndElement{
   font-weight: 100;
 }
 
+._canvas_container{
+  z-index: 9999 !important;
+  pointer-events: none;
+}
+/* Flag */
+#flag{
+  height:27vw;
+  position: absolute;
+  top:0;
+  left:0;
+  opacity: 0;
+  
+}
+.page1Header:nth-child(4) {
+  /* background-color: red; */
+  position: relative;
+  z-index: 999;
+
+}
