@@ -253,8 +253,8 @@ function flagAnimation(){
 flagAnimation();
 function footerAnimation() {
 
-  var clutter = ""
-  var clutter2 = ""
+  let clutter = ""
+  let clutter2 = ""
   document.querySelector("footer h1").textContent.split("").forEach(function (elem) {
     clutter += `<span>${elem}</span>`
   })
@@ -277,6 +277,7 @@ function footerAnimation() {
     })
   })
   document.querySelector("#footer-text").addEventListener("mouseleave", function () {
+    console.lgo
     gsap.to("footer h1 span", {
       opacity: 1,
       stagger: 0.1,
