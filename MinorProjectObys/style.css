@@ -575,9 +575,9 @@ footer{
   margin-bottom: 15vw;
 }
 footer h1{
-  font-size:9vw;
-  font-weight: 100;
-  margin-bottom: 5vw;
+  font-size: 7.2vw;
+  text-transform: uppercase;
+  /* background-color: blue; */
   position: relative;
 }
 footer h1::before{
@@ -588,6 +588,29 @@ footer h1::before{
   left:-12%;  
   position:absolute;
   top:15%;
+}
+#footer-text {
+  position: relative;
+
+  /* background-color: red; */
+}
+
+#footer-text h2 {
+  font-size: 7.2vw;
+  text-transform: uppercase;
+  position: absolute;
+  top: 4%;
+  font-weight: 500;
+
+  left: 0;
+  font-family: "silk serif";
+}
+
+#footer-text h2 span {
+  font-family: "silk serif";
+  opacity: 0;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
 }
 #underline{
   height:1px;
