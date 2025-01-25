@@ -290,3 +290,60 @@ function footerAnimation() {
   })
 }
 footerAnimation();
+function scrollTriggerAnimations(){
+  const page3h1=document.querySelector("#page3 h1");
+  const page3line=document.querySelector("#page3>#underline");
+  const page4h1=document.querySelector("#page4Content > h1");
+  const page4line=document.querySelector("#page4Content>#page4line");
+
+  gsap.from(page3h1, {
+    y:500,
+    duration:1,
+    delay:0,
+    scrollTrigger: {
+      trigger:"#page3",
+      scroller:"#main",
+      markers:false,
+      start: "top 90%",
+      end: "top 20%",
+    },
+  });
+  gsap.from(page3line,{
+    x:5000,
+    duration:1,
+    delay:0,
+    scrollTrigger:{
+      trigger:"#page3",
+      scroller:"#main",
+      markers:false,
+      start: "top 90%",
+      end: "top 20%",
+    },
+  });
+  console.log(page4h1);
+  gsap.from(page4h1,{
+    y:1000,
+    duration:1,
+    delay:0,
+    scrollTrigger:{
+      trigger:"#page4",
+      scroller:"#main",
+      start:"top 60%",
+      marker:true,
+      end:"top 20%",
+    }
+  });
+  gsap.from(page4line,{
+    x:5000,
+    duration:1,
+    delay:0,
+    scrollTrigger:{
+      trigger:"#page4",
+      scroller:"#main",
+      start:"top 60%",
+      marker:true,
+      end:"top 20%",
+    }
+  });
+}
+scrollTriggerAnimations();

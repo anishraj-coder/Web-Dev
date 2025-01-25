@@ -303,7 +303,7 @@ nav {
   position: relative;
   padding-top:5vw;
   padding-bottom: 3vw;
-  margin-bottom:20vw;
+  margin-bottom:8vw;
 }
 #page3 #underline{
   margin-left:27vw;
@@ -316,6 +316,7 @@ nav {
   margin-left:27vw;
   text-transform: uppercase;
   font-weight: 500;
+
 }
 #page3 h1::before{
   content:"02";
