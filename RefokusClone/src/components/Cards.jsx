@@ -10,7 +10,7 @@ function Cards() {
     <div className='w-full '>
         <div className='max-w-screen-xl mx-auto py-15 flex gap-2 font-satoshi'>
             <Card elem={elem[0]} width={'basis-1/3'}/>    
-            <Card elem={elem[1]}  hover={'bg-violet-500'} width={'basis-2/3'}/>    
+            <Card elem={elem[1]}  hover={true} width={'basis-2/3'}/>    
         </div>        
     </div>
   )

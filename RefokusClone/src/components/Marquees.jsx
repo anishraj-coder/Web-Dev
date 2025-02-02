@@ -9,7 +9,7 @@ function Marquees() {
     ];
   return (
     <div className='py-20 mt-10'>
-        {marqueeList.map(item=><Marquee key={nanoid()} data={item}/>)}
+        {marqueeList.map((item,idx)=><Marquee index={idx} key={nanoid()} data={item}/>)}
         
     </div>
   )

@@ -1,15 +1,15 @@
 import React from "react";
 import Button from "./Button";
 
-function Product({ data }) {
+function Product({ data,mover,index }) {
   const color = data.color;
 //   console.log(color);
   return (
-    <div
-      className={`w-full text-white py-10  h-[15rem] `}
+    <div onMouseEnter={()=>mover(index)} 
+      className={`w-full text-white py-10  h-[20rem] `}
       style={{hover: { backgroundColor: color } }}
     >
-      <div className="max-w-screen-xl mx-auto flex items-center justify-between">
+      <div className="max-w-screen-xl mx-auto flex items-center justify-between ">
         <h1 className="font-satoshi text-5xl font-semibold">{data.name}</h1>
         <div className="details w-1/3">
           <p className="text-md mb-10 font-satoshi ">{data.description}</p>
