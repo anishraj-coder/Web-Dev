@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Iconochive';
+  src: url("./assets/Iconochive-Regular.woff") format('woff');
+}
+@font-face {
+  font-family: 'satoshi';
+  src: url('./assets/649d7ca1f5c7aa41f51eb483_satoshi-variable.woff2')format('woff2');
+}
+.font-satoshi{
+  font-family: 'satoshi';
+
+}
+.font-iconochive{
+  font-family: 'Iconochive';
+}
