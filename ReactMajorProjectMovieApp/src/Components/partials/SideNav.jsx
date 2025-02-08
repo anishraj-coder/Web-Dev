@@ -10,8 +10,9 @@ function SideNav() {
       </h1>
      <nav className="flex flex-col gap-2 text-zinc-400">
       <h1 className="text-white text-xl mb-2 font-g-medium">New Feed</h1>
+      
       <NavLink to="/trending" className="hover:text-white hover:bg-[#6556CD] p-3 font-g-regular transition-all duration-250 rounded-lg text-lg"><i className="ri-fire-line mr-2"></i>Trending</NavLink>
-      <NavLink to="/" className="hover:text-white hover:bg-[#6556CD] p-3 font-g-regular transition-all duration-250 rounded-lg text-lg"><i className="ri-bard-line mr-2"></i>Popular</NavLink> 
+      <NavLink to="/popular" className="hover:text-white hover:bg-[#6556CD] p-3 font-g-regular transition-all duration-250 rounded-lg text-lg"><i className="ri-bard-line mr-2"></i>Popular</NavLink> 
       <NavLink to="/" className="hover:text-white hover:bg-[#6556CD] p-3 font-g-regular transition-all duration-250 rounded-lg text-lg"><i className="ri-film-line mr-2"></i>Movies</NavLink>
       <NavLink to="/" className="hover:text-white hover:bg-[#6556CD] p-3 font-g-regular transition-all duration-250 rounded-lg text-lg"><i className="ri-tv-2-line mr-2"></i>TV Shows</NavLink>
       <NavLink to="/" className="hover:text-white hover:bg-[#6556CD] p-3 font-g-regular transition-all duration-250 rounded-lg text-lg"><i className="ri-team-line mr-2"></i>People</NavLink>

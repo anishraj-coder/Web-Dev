@@ -15,7 +15,8 @@ function Trending() {
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
   const [loading, setLoading] = useState(false);
-
+  
+  document.title = "MovieApp | Trending";
   const getTrending = async (pageNum = 1) => {
     if (loading) return;
     

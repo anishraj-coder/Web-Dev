@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './Components/Home'
 import Loader from './Components/partials/Loader'
 import Trending from './Components/Trending'
+import Popular from './Components/Popular'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/trending' element={<Trending/>}/>
+        <Route path='/popular' element={<Popular/>}/>
       </Routes>
     </div>
   )

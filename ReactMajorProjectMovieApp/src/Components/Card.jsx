@@ -12,7 +12,7 @@ function Card({data}) {
       ></div>
       <img
         className="h-full w-full object-center object-cover"
-        src={`https://image.tmdb.org/t/p/original/${data.backdrop_path || ori}`}
+        src={`https://image.tmdb.org/t/p/original/${data.backdrop_path || data.poster_path}`}
         alt=""
       />
       <div className="details absolute top-[82%] text-white p-3  w-full h-1/2 flex flex-col justify-end group-hover:top-[50%] transition-all duration-200 ">
