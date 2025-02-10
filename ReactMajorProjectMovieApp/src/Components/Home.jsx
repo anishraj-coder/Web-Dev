@@ -44,7 +44,7 @@ function Home() {
           <div className="mb-6 flex justify-between text-white px-3 mt-4">
             <h1 className="font-g-bold text-5xl">Trending</h1>
             <DropDown
-              onClick={(e) => setCategory(e.target.value)}
+              onChange={(e) => setCategory(e.target.value)}
               title={`Filter`}
               option={[`tv`, "movie", "all"]}
             />

@@ -14,7 +14,7 @@ function Popular() {
     const [hasMore, setHasMore] = useState(true);
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
-    document.title='MovieApp | Popular';
+    document.title='MovieApp | Popular  '+ category.toUpperCase();
     const getPopular = async (pageNum = 1) => {
         if (loading) return;
         
@@ -77,9 +77,10 @@ function Popular() {
                         <h1 className="text-zinc-400 text-3xl font-g-bold">Popular</h1>
                         <Topnav />
                         <DropDown 
-                            onClick={handleCategoryChange} 
+                            onChange={handleCategoryChange} 
                             title="Category" 
                             option={["movie", "tv"]} 
+                            value={category}
                         />
                     </div>
 

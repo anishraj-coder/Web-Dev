@@ -10,20 +10,22 @@ import InfiniteScroll from "react-infinite-scroll-component";
 function Trending() {
   const navigate = useNavigate();
   const [trending, setTrending] = useState([]);
-  const [category, setCategory] = useState('all');
-  const [duration, setDuration] = useState('day');
+  const [category, setCategory] = useState("all");
+  const [duration, setDuration] = useState("day");
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
   const [loading, setLoading] = useState(false);
-  
-  document.title = "MovieApp | Trending";
+
+  document.title = "MovieApp | Trending " + category.toUpperCase();
+
   const getTrending = async (pageNum = 1) => {
     if (loading) return;
-    
+
     try {
       setLoading(true);
+      console.log(`/trending/${category}/${duration}?page=${pageNum}`);
       const response = await axios.get(`/trending/${category}/${duration}?page=${pageNum}`);
-      
+
       if (!response.data || !response.data.results || response.data.results.length === 0) {
         setHasMore(false);
         return;
@@ -32,11 +34,12 @@ function Trending() {
       if (pageNum === 1) {
         setTrending(response.data.results);
       } else {
-        setTrending(prev => [...prev, ...response.data.results]);
+        setTrending((prev) => [...prev, ...response.data.results]);
       }
+
       setPage(pageNum + 1);
     } catch (error) {
-      console.log("Error:\t" + error);
+      console.error("Error fetching trending data:", error);
       setHasMore(false);
     } finally {
       setLoading(false);
@@ -49,10 +52,9 @@ function Trending() {
     }
   };
 
-  
   useEffect(() => {
     getTrending(1);
-    
+
     return () => {
       setTrending([]);
       setPage(1);
@@ -60,7 +62,6 @@ function Trending() {
     };
   }, []);
 
-  
   useEffect(() => {
     setPage(1);
     setTrending([]);
@@ -70,22 +71,16 @@ function Trending() {
 
   const handleCategoryChange = (e) => {
     setCategory(e.target.value);
-    setPage(1);
-    setTrending([]);
-    setHasMore(true);
   };
 
   const handleDurationChange = (e) => {
     setDuration(e.target.value);
-    setPage(1);
-    setTrending([]);
-    setHasMore(true);
   };
 
   return (
     <>
       {trending && trending.length > 0 ? (
-        <div 
+        <div
           className="w-screen h-screen bg-[#1F1E24] p-8 overflow-x-hidden overflow-y-auto"
           id="scrollableDiv"
         >
@@ -96,16 +91,18 @@ function Trending() {
             ></i>
             <h1 className="text-zinc-400 text-3xl font-g-bold">Trending</h1>
             <Topnav />
-            <DropDown 
-              onClick={handleCategoryChange} 
-              title="Category" 
-              option={["all", "movie", "tv"]} 
+            <DropDown
+              onChange={handleCategoryChange}
+              title="Category"
+              option={["all", "movie", "tv"]}
+              value={category}
             />
             <span className="block w-[10px] bg-[#6556CD] mx-3 h-full"></span>
-            <DropDown 
-              onClick={handleDurationChange} 
-              title="Duration" 
-              option={["week", "day"]} 
+            <DropDown
+              onChange={handleDurationChange}
+              title="Duration"
+              option={["week", "day"]}
+              value={duration}
             />
           </div>
 

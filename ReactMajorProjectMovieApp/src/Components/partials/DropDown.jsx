@@ -1,15 +1,17 @@
 import React from "react";
 
-function DropDown({ title, option, onClick }) {
+function DropDown({ title, option, onChange, value }) {
   return (
     <div className="select font-g-medium">
-      <select onChange={onClick} defaultValue="0" name="format" id="format">
-        <option value="0" disabled>
-          {title||'filter'}
-        </option>
+      <label className="text-zinc-400 mr-2 capitalize">{title}:</label>
+      <select 
+        onChange={onChange} 
+        value={value} 
+        className="bg-gray-800 text-white p-2 rounded"
+      >
         {option.map((o, idx) => (
           <option key={idx} value={o}>
-           {o.toUpperCase()}
+            {o.toUpperCase()}
           </option>
         ))}
       </select>
