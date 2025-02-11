@@ -101,7 +101,7 @@ function Popular() {
                         scrollableTarget="scrollableDiv"
                     >
                         <div className="w-full flex flex-wrap justify-center gap-5">
-                            <Cards data={popular} />
+                            <Cards type={category} data={popular} />
                         </div>
                     </InfiniteScroll>
                 </div>

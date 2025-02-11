@@ -7,13 +7,13 @@ export const tvSlice =createSlice({
     name:"tv",
     initialState,
     reducers:{
-        setInfo:(state,action)=>{
+        setPeopleInfo:(state,action)=>{
             state.info=action.payload;
         },
-        removeInfo:(state)=>{
+        removePeopleInfo:(state)=>{
             state.info=null;
         }
     }
 })
-export const {setInfo,removeInfo}=tvSlice.actions;
+export const {setPeopleInfo,removePeopleInfo}=tvSlice.actions;
 export default tvSlice.reducer;

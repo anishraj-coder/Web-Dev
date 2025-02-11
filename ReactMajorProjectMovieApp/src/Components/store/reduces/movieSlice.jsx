@@ -1,19 +1,38 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit";
 
-export const initialState={
-    info:null,
-}
-export const movieSlice =createSlice({
-    name:"movie",
-    initialState,
-    reducers:{
-        setInfo:(state,action)=>{
-            state.info=action.payload;
-        },
-        removeInfo:(state)=>{
-            state.info=null;
-        }
+export const initialState = {
+  info: {
+    detail: null,
+    externalIds: null,
+    recommendations: null,
+    similar: null,
+    videos: null,
+    watchProviders: null,
+    credits: null,
+  },
+  loading: false,
+  error: null
+};
+
+export const movieSlice = createSlice({
+  name: "movie",
+  initialState,
+  reducers: {
+    setMovieInfo: (state, action) => {
+      state.info = action.payload;
+    },
+    removeMovieInfo: (state) => {
+      state.info = initialState.info;
+    },
+    setLoading: (state, action) => {
+      state.loading = action.payload;
+    },
+    setError: (state, action) => {
+      state.error = action.payload;
     }
-})
-export const {setInfo,removeInfo}=movieSlice.actions;
+  },
+});
+
+export const { setMovieInfo, removeMovieInfo, setLoading, setError } = movieSlice.actions;
+
 export default movieSlice.reducer;

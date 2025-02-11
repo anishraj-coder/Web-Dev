@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-function Card({ data }) {
+function Card({ data, title }) {
   
   const titleRef = useRef(null);
   const containerRef = useRef(null);
@@ -68,7 +68,7 @@ function Card({ data }) {
           {data.overview && data.overview.slice(0, 50)}...{" "}
           <Link className="text-blue-800">more</Link>
         </p>
-        <Link className="bg-[#6556CD] text-white text-sm w-fit font-g-regular py-2 px-5 rounded-full hover:bg-[#6556CD]">
+        <Link to={`/${data.media_type||title}/details/${data.id}`} className="bg-[#6556CD] text-white text-sm w-fit font-g-regular py-2 px-5 rounded-full hover:bg-[#6556CD]">
           Watch Now
         </Link>
       </div>

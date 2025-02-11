@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import DropDown from "./DropDown";
 
 function HorizontalCards({ data }) {
-  
+  // console.log(data);
   return (
     <div className="w-full max-h-[65vh] text-white p-3 ">
      
@@ -22,7 +22,7 @@ function HorizontalCards({ data }) {
               {d.overview.slice(0, 80)}...{" "}
               <Link className="text-blue-800">more</Link>
             </p>
-            <Link className="text-xl absolute bottom-5 left-[50%] flex items-center h-[10%] w-[80%] justify-center -translate-x-[50%] font-g-medium active:bg-[#5548a9] active:text-zinc-300 bg-[#6556CD] rounded-full mt-4">
+            <Link to={`/${d.media_type}/details/${d.id}`} className="text-xl absolute bottom-5 left-[50%] flex items-center h-[10%] w-[80%] justify-center -translate-x-[50%] font-g-medium active:bg-[#5548a9] active:text-zinc-300 bg-[#6556CD] rounded-full mt-4">
               Watch Now
             </Link>
           </div>
