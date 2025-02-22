@@ -1,7 +1,7 @@
 import axios from "../../../utils/axios";
-import { setMovieInfo, setLoading, setError } from "../reduces/movieSlice";
+import { setTvInfo, setLoading, setError } from "../reduces/tvSlice";
 
-export const getMovieDetails = (id) => async (dispatch) => {
+export const getTVDetails = (id) => async (dispatch) => {
   dispatch(setLoading(true));
   try {
     const [
@@ -13,17 +13,17 @@ export const getMovieDetails = (id) => async (dispatch) => {
       { data: watchProviders },
       { data: credits },
     ] = await Promise.all([
-      axios.get(`/movie/${id}`),
-      axios.get(`/movie/${id}/external_ids`),
-      axios.get(`/movie/${id}/recommendations`),
-      axios.get(`/movie/${id}/similar`),
-      axios.get(`/movie/${id}/videos`),
-      axios.get(`/movie/${id}/watch/providers`),
-      axios.get(`/movie/${id}/credits`),
+      axios.get(`/tv/${id}`),
+      axios.get(`/tv/${id}/external_ids`),
+      axios.get(`/tv/${id}/recommendations`),
+      axios.get(`/tv/${id}/similar`),
+      axios.get(`/tv/${id}/videos`),
+      axios.get(`/tv/${id}/watch/providers`),
+      axios.get(`/tv/${id}/credits`),
     ]);
 
     dispatch(
-      setMovieInfo({
+      setTvInfo({
         detail,
         externalIds: external_ids,
         recommendations: recommendations || { results: [] },
@@ -34,7 +34,7 @@ export const getMovieDetails = (id) => async (dispatch) => {
       })
     );
   } catch (error) {
-    console.error("Movie Details Error:", error);
+    console.error("TV Details Error:", error);
     dispatch(setError(error.response?.data?.status_message || error.message));
   } finally {
     dispatch(setLoading(false));
