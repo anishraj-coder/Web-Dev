@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@remixicon/react": "^4.6.0",
     "@tailwindcss/vite": "^4.1.6",
+    "locomotive-scroll": "^4.1.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwindcss": "^4.1.6"
