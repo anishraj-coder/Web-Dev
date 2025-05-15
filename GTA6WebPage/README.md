@@ -1,9 +1,7 @@
 
-
-
-          
 # GTA VI Landing Page
 
+![GTA VI Landing Page Demo](/assets/demo.png)
 ## Project Description
 An immersive, animated landing page inspired by Grand Theft Auto VI, showcasing advanced web animations and interactive elements. This project demonstrates modern web development techniques using React and GSAP, creating a cinematic user experience that captures the essence of the GTA franchise's visual style.
 
